@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> Controller Example</title>
+	</head>
+	<body>
+		<h1>Angular example</h1>
+		<div ng-app="" ng-controller="student">
+			Enter First name: <input type="text" ng-model="student.first" placeholder="enter your firstname"/>
+			Enter Last name: <input type="text" ng-model="student.last" placeholder="enter your Lastname"/>
+			<br>
+			<h5>You are entering:</h5> {{student.fullname()}}
+		</div>
+		<script>
+			function student($scope){
+				$scope.student = {
+				first: "",
+				last: "",
+				fullname: function(){
+					var studentobject;
+					studentobject = $scope.student;
+					return $scope.student.first + " " + $scope.student.last;
+					}
+				};
+			}
+		</script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js" ></script>
+	</body>
+</html>

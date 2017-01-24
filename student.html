@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Student</title>
+	</head>
+	<body>
+		<h1>sample application</h1>
+		<div ng-app="" ng-init=" quantity = 1; cost = 100;
+						student={firstname:'sachin', lastname:'patel', rollno:'102'};
+						marks=[50,80,75,92,86]">
+		<p>hello <span>{{student.firstname +" " + student.lastname }}</span>!</p>
+		<p>Expense on the book {{cost * quantity}} Rs</p>
+		<p>Roll no. {{student.rollno}}</p>
+		<p> Marks(MAths): {{marks[3]}}</p>		
+		</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js" ></script>
+	</body>
+</html>

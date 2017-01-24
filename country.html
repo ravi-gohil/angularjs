@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>country</title>
+	</head>
+	<body>
+		<h1>Sample application</h1>
+		<div ng-app="" ng-init="countries = [{locate:'en-US',name:'United States'},
+											{locate:'en-In', name:'India'},
+											{locate:'en-Fr', name:'Frace'}]">
+		<p>Inter your name:<input type="text" ng-model="name"/></p>
+		<p>hello <span ng-bind="name"></span> ! </p>
+		<p>List of countries:</p>
+		<ol>
+			<li ng-repeat="country in countries">{{'country :'+country.name + ', locate : ' + country.locate}}</li>
+		</ol>
+		</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js" ></script>
+	</body>
+</html>
